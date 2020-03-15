@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+		<meta charset="utf-8">
+        <title>Signup-XLaundry</title>
+<!--css-->
+<link rel="stylesheet" href="css/login.css">
+<!--favicon-->
+<link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+    <h1>SignUp<sub>XLaundry</sub></h1>
+    <hr>
+    <div class="box">
+        <form action="/signup" method="POST">
+        <div class="username">
+            
+            <input type="text" name="username" placeholder="Username" required autocomplete="off">
+        </div>
+        <br>
+        <div class="password">
+            <input type="password" name="password" placeholder="Password" required autocomplete="off"><br><br>
+            <input type="email" name="email" placeholder="E-mail" required autocomplete="off"><br><br>
+            <input type="tel" name="phoneno" placeholder="Phone No." pattern="[0-9]{10}" required autocomplete="off"><br><br><br>
+            <button>Sign Up</button>
+            <br><br>
+            <a href="/login">Login</a>
+        </div>
+        </form>
+    </div>
+    <h1>"Time is Money with XLaundry you save both"</h1>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $("div.box").hide();
+        $("div.box").fadeIn(1500);
+    </script>
+</body>
+</html>

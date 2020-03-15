@@ -1,0 +1,103 @@
+html{ overflow-y: scroll;}
+body{
+	text-align:center;
+	padding-top: 100px; 
+}
+h1{
+		margin-top: 3rem;
+		font-family: 'Roboto', sans-serif;
+		font-size: 2.5rem;
+		font-weight: bold;
+}
+h6{
+	margin: 20px 0 28px 0;
+}
+/* navbar */
+
+.nav-item{
+	padding: 0 15px;
+	font-size: 20px;
+}
+.brand-name{
+    font-family: 'Mitr', sans-serif;
+	font-size: 2rem;
+}
+.brand-name:hover{
+	text-decoration: none;
+	color: #007bff;
+}
+
+.navbar{
+	padding-bottom: 0.5rem;
+	border-style :none none solid;
+	border-width: 0 0 1px;
+	border-bottom-color: lightgray;
+	
+}
+/*.collapse{
+	margin-bottom: 5px;
+	}*/
+
+.navbar-brand{
+	position:relative;
+	bottom: 2px;
+}
+.btn-primary{
+	position:relative;
+	top:8px;
+}
+a.link{
+
+	color:black;
+}
+a.link:hover{
+	text-decoration: none;
+}
+.card{
+
+	padding-top:50px;
+	padding-bottom: 50px;
+}
+body{
+	margin-right: 10px;
+	margin-left: 10px;
+}
+.fa-7x{
+	color: #007bff;
+}
+.button{
+	padding-top: 16px;
+}
+button{
+	border:none;
+	background-color: white;
+	font-weight: bold;
+	font-size: larger;	
+	margin-bottom: 10px;
+}
+span{
+	margin-bottom: 2px;
+}
+span.left{
+	margin-right: 1px;
+}
+span.right{
+margin-left: 1px;
+}
+.aboutus{
+	text-align: center;
+	line-height: 2;
+}
+/*footer*/
+footer{
+	background-color:#007bff;
+	padding: 25px;
+	color: white;
+	font-family:sans-serif;
+}
+footer p{
+	margin-bottom:0;
+}
+footer{
+	margin-top: 35px;
+}

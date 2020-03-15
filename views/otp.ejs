@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+		<meta charset="utf-8">
+        <title>Signup-XLaundry</title>
+<!--css-->
+<link rel="stylesheet" href="css/login.css">
+<!--favicon-->
+<link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+    <h1>Enter OTP<sub>XLaundry</sub></h1>
+    <hr>
+    <% if(error != ""){ %>
+        <div class="error-box"><%= error %></div>
+    <%}%>
+    <div class="box">
+        <form action="/otp" method="POST">
+       
+        <div class="password">
+            <input type="password" name="otp" placeholder="Enter OTP" required autocomplete="off"><br><br><br>
+            <button>Enter</button>
+        </div>
+        </form>
+    </div>
+    <h1>"Time is Money with XLaundry you save both"</h1>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $("div.box").hide();
+        $("div.box").fadeIn(1500);
+    </script>
+</body>
+</html>

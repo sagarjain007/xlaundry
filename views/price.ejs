@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+<head>
+		<meta charset="utf-8">
+		<title>Contact Us - XLaundry</title>
+		
+<!--favicon-->
+		<link rel="icon" href="images/favicon.ico">
+<!--bootstrap-->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<!--css-->
+		<link rel="stylesheet" href="css/price.css">
+<!--google fonts-->
+		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Mitr&display=swap" rel="stylesheet">
+<!--bootstrap script-->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>		
+</head>
+<body>
+<!--navigation bar-->
+<%- include("navbar"); -%>
+
+    <h1>Xlaundry Price List</h1>
+    <br><br><br>
+    <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <h3>Item Name</h3>
+           <h3><span class="badge badge-pill">Price</span></h3>
+          </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Regular garments (Upto 4kgs)
+          <span class="badge badge-primary badge-pill">Rs.200</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            Regular garments (Above 4kgs)
+          <span class="badge badge-primary badge-pill">Rs.60/kg</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Curtains Small
+          <span class="badge badge-primary badge-pill">Rs.40/piece</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            Curtains Heavy
+            <span class="badge badge-primary badge-pill">Rs.120/piece</span>
+          </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            Blankets Double
+            <span class="badge badge-primary badge-pill">Rs.120/piece</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Blankets Heavy
+            <span class="badge badge-primary badge-pill">Rs.200/piece</span>
+          </li>
+    </ul>
+</body>
+</html>

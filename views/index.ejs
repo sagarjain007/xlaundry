@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+<head>
+		<meta charset="utf-8">
+		<title>XLaundry</title>
+<!--bootstrap-->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<!--css-->
+		<link rel="stylesheet" href="css/styles.css">
+<!--favicon-->
+		<link rel="icon" href="images/favicon.ico">
+<!--googlefonts-->
+		<link href="https://fonts.googleapis.com/css?family=Mitr&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+<!--bootstrap script-->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>		
+<!--fontawesome-->  
+    <script src="https://kit.fontawesome.com/59d08ea832.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!--navigation bar-->
+<%- include("navbar"); -%>
+<a href="https://api.whatsapp.com/send?phone=+918310603520">
+<img class="whatsapp-logo" src="images/WhatsApp_Logo_1.png" alt="whatsapp_image">
+</a>
+<!--Carousel-->
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="2000" data-pause="hover" data-touch="true">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="carouselimg" src="images/i11.png" alt="laundry">
+		<div class="welcome-msg">
+			<p>Welcome</p><p>  To</p>
+			<p>XLaundry!</p>
+		</div>
+    </div>
+    <div class="carousel-item">
+      <img class="carouselimg" src="images/i2.png" alt="promo">
+    </div>
+    <div class="carousel-item">
+      <img class="carouselimg" src="images/i3.png">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">    
+		<i class="fa fa-chevron-circle-left font-awesome"></i>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+		<i class="fa fa-7x fa-chevron-circle-right font-awesome"></i>
+  </a>
+</div>
+
+<!--how we work-->
+
+<section id="one">
+<div>
+<h1>How we Work!</h1>
+<hr>
+<ul type=none>
+<li>
+<p>Place your order via phone call, mobile app, or website.</p>
+<img src="images/hiw1.png" class="hiwimg">
+</li>
+<li>
+<img src="images/hiw2.png" class="hiwimg">
+<p>Our staff will come to your place to collect your garments.</p>
+</li>
+<li>
+<p>We recieve your clothes and washed at our XLaundry hubs and your order is processed.</p>
+<img src="images/hiw3.png" class="hiwimg">
+</li>
+<li>
+<img src="images/hiw4.png" class="hiwimg">
+<p>You get your clean and fresh clothes delivered at your doorstep.</p>
+</li>
+</ul>
+</div>
+</section>
+
+<!--Testimonials-->
+
+<section id="two">
+  <h1>Testimonials!!!</h1>
+  <hr>
+  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" data-interval="2000" data-pause="hover" data-touch="true">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/hirok.jpg" class="d-block  testimonial-img" alt="...">
+          <br>
+          <h3>" The best place for your clothes "</h3>
+          <h5>Hirok Adhikari</h5>
+          <br>
+          <br>
+      </div>
+      <div class="carousel-item">
+        <img src="images/srk.jpg" class="d-block testimonial-img" alt="...">
+       
+          <br>
+          <h3>" XLaundry. Yes, it's great! "</h3>
+          <h5>SRK</h5>
+          <br>
+          <br>
+      </div>
+      <div class="carousel-item">
+        <img src="images/adi.jpeg" class="d-block  testimonial-img" alt="...">
+          <br>
+          <h3>" Perfect place for a perfect laundry."</h3>
+          <h5>BOSS</h5>
+          <br>
+          <br>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Why us-->
+<section id="three">
+  <h1>Why Us</h1>
+  <hr>
+  <div class="row">
+    <div class="col-md-4">
+      <i class="fas fa-rupee-sign fa-5x"></i>
+      <br>
+      <h3>Affordable Price</h3>
+      <p class="container-fluid">Forget all the hassles and save yourself extra time and money. We are obsessed about creating a stress-free customer experience for you at rock bottom prices.</p>
+    </div>
+      
+    <div class="col-md-4">
+      <i class="fas fa-shipping-fast fa-5x"></i>
+      <br>
+      <h3>Fast Shipping</h3>
+      <p class="container-fluid">We try to deliver your garments back to you,
+        fresh and clean, as fast as possible.
+        Meanwhile, you can relax with a
+        cup of herbal tea, if that’s your thing.</p>
+    </div>
+
+    <div class="col-md-4">
+      <i class="fas fa-phone-square fa-5x"></i>
+      <br>
+      <h3>24/7 Customer Support</h3>
+      <p class="container-fluid">We always have our ears open for you.  Any complaints or grievances we are just a call away.
+         Even if we happen to miss any of our calls, our support champs will get in touch with you right away.</p>
+    </div>
+  </div>
+</section>
+<footer>
+<p>Copyright © 2020 XLaundry</p>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

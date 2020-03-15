@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+
+<head>
+		<meta charset="utf-8">
+		<title>Contact Us - XLaundry</title>
+		
+<!--favicon-->
+		<link rel="icon" href="images/favicon.ico">
+<!--bootstrap-->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<!--css-->
+		<link rel="stylesheet" href="css/contact.css">
+<!--google fonts-->
+		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Mitr&display=swap" rel="stylesheet">
+<!--bootstrap script-->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>		
+<!--fontawesome-->  
+    <script src="https://kit.fontawesome.com/59d08ea832.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!--navigation bar-->
+<%- include("navbar"); -%>
+<!--CARD-->
+<h1>Here To Help You :)</h1>
+<h6>Got a question or have any problem we are always here for your help!</h6>
+
+<div class="card-deck">
+    <div class="card">
+      <i class="fas fa-7x fa-map-marked-alt card-img-top"></i>
+      <div class="card-body">
+        <h3 class="card-title">Visit Us</h3>
+        <p class="card-text">Jain University, 9th Block Jayanagar, Bangalore - 11</p>
+      </div>
+    </div>
+    <div class="card">
+        <i class="far fa-address-book fa-7x card-img-top"></i>
+      <div class="card-body">
+        <h3 class="card-title">Call Us</h3>
+        <p class="card-text">080-26631163</p>
+      </div>
+    </div>
+    <div class="card">
+        <i class="far fa-envelope card-img-top fa-7x"></i>
+      <div class="card-body">
+        <h3 class="card-title">Mail us</h3>
+        <a href = "mailto: contact@xlaundry.com"  class="link">contact@xlaundry.com</a>
+      </div>
+    </div>
+  </div>
+  <div class="button">
+      <button><span class="spinner-grow spinner-grow-sm left" role="status"></span>About Us<span class="spinner-grow spinner-grow-sm right" role="status"></span></button>
+      <p class="aboutus"><span><b>You Spend An Average Of 2.26 Years In Your Lifetime Washing Clothes. Can You Believe It?
+
+        Relieve Yourself, Outsource Your Laundry!</b><br><br></span> Our core team is a healthy blend of senior executives with years of experience in customer service at illustrious MNCs along with cleaning and ironing professionals who understand the finer details of laundering.
+        We take pride in employing the dhobi community, who have been engaged in the profession for generations now, and bringing them closer to the technology that we provide, to bridge the steep gap between price and quality. Not only does this help mitigate the situation of the disorganized sector that washing and cleaning clothes still belongs to but also provide more stable job opportunities and better working environments to local dhobis.
+        Most prestigious establishments overcharge their customers to recover their exorbitant production costs. But with the right infrastructural facility and an impeccably trained staff, we strive to bring world-class drying and cleaning services to your doorstep. So the next time you find yourself wrestling with a stubborn coffee stain, you know whom to call.</p>
+  </div>
+
+  <footer>
+    <p>Copyright © 2020 XLaundry</p>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    $(".aboutus").hide();
+    $("button").click(function(){
+        
+         $(".aboutus").slideToggle();
+    });
+  </script>
+</body>
+</html>

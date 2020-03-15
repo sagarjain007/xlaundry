@@ -1,0 +1,108 @@
+/*.wrapper { 
+    height: 100%;
+    width: 100%;
+    left:0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+  background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+  background-size: 1800% 1800%;
+  
+  -webkit-animation: rainbow 18s ease infinite;
+  -z-animation: rainbow 18s ease infinite;
+  -o-animation: rainbow 18s ease infinite;
+    animation: rainbow 18s ease infinite;}
+  
+  @-webkit-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @-moz-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @-o-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @keyframes rainbow { 
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }*/
+
+.middle{
+    text-align: center;
+}
+.wrapper{background: linear-gradient(93deg, #15aee0, #1581e0, #15e0d3);
+    background-size: 600% 600%;
+    
+    -webkit-animation: AnimationName 6s ease infinite;
+    -moz-animation: AnimationName 6s ease infinite;
+    animation: AnimationName 6s ease infinite;
+}
+    @-webkit-keyframes AnimationName {
+        0%{background-position:0% 52%}
+        50%{background-position:100% 49%}
+        100%{background-position:0% 52%}
+    }
+    @-moz-keyframes AnimationName {
+        0%{background-position:0% 52%}
+        50%{background-position:100% 49%}
+        100%{background-position:0% 52%}
+    }
+    @keyframes AnimationName {
+        0%{background-position:0% 52%}
+        50%{background-position:100% 49%}
+        100%{background-position:0% 52%}
+    }
+body{
+    padding-top: 5%;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h1{
+    text-align: center;
+    margin: 2% auto 4% auto;
+    color: greenyellow;
+    border-bottom: double;
+    display: inline-block;
+}
+h6{
+    font-size: x-large;
+    margin-top: 0;
+    color:greenyellow;
+}
+
+ul{
+    display: table;
+    margin: 0 auto;
+    line-height: 0;
+}
+li{
+    margin-bottom: 1.5em;
+}
+#map{
+    margin: auto;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+#mapDiv{
+    border-style: solid;
+    border-width: thick;
+    box-shadow: rgba(0, 0, 0, 0.3) 5px 5px 15px -5px;
+    border-radius: 47px;
+    border-color: transparent;
+    display: inline-block;
+}
+.padd{
+    padding-top: 4%;
+    padding-bottom: 3%;
+}
+.btn-success{
+    margin-right:5% ;
+}

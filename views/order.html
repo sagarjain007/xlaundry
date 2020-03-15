@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="order.css">
+  <!--fontawesome-->  
+  <script src="https://kit.fontawesome.com/59d08ea832.js" crossorigin="anonymous"></script>
+  
+</head>
+<body>
+<div class="header">
+    <ul type="none">
+        <li class="heading-display li1"><h1>XLaundry</h1></li>
+        <li class="heading-display li2"><h4><i class="fas fa-phone-volume fa-2x"></i>&nbsp;080-26631163</h4></li>
+        <li class="heading-display li3"><h3>Welcome, xxxxx</h3></li>
+        <li class="heading-display li4"><a href="...">Logout &nbsp;|&nbsp;<i class="fas fa-sign-out-alt"></i></a></li>
+    </ul>
+    
+</div>
+<div class="container">
+<div class="tabbed-pane">
+  <ul class="nav nav-pills">
+    <li class="active"><a data-toggle="tab" href="#book">Book</a></li>
+    <li><a data-toggle="tab" href="#price">Price</a></li>
+    <li><a data-toggle="tab" href="#myorders">My Orders&nbsp;<span class="badge badge-light">9</span></a></li>
+    <li><a data-toggle="tab" href="#address">Address</a></li>
+  </ul>
+</div>
+  <!--Tab 1-->
+  <div class="tab-content">
+    <div id="book" class="tab-pane fade in active">
+      <h3>Schedule a Pickup</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <!--price-->
+    <div id="price" class="tab-pane fade">
+        <h1>Xlaundry Price List</h1>
+        <br><br><br>
+        <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <h3>Item Name</h3>
+               <h3><span class="badge badge-pill">Price</span></h3>
+              </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Regular garments (Upto 4kgs)
+              <span class="badge badge-primary badge-pill">Rs.200</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Regular garments (Above 4kgs)
+              <span class="badge badge-primary badge-pill">Rs.60/kg</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Curtains Small
+              <span class="badge badge-primary badge-pill">Rs.40/piece</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Curtains Heavy
+                <span class="badge badge-primary badge-pill">Rs.120/piece</span>
+              </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Blankets Double
+                <span class="badge badge-primary badge-pill">Rs.120/piece</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Blankets Heavy
+                <span class="badge badge-primary badge-pill">Rs.200/piece</span>
+              </li>
+        </ul>
+    </div>
+    <!--tab3-->
+    <div id="myorders" class="tab-pane fade">
+      <h3>Menu 2</h3>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+    </div>
+    <!--tab4-->
+    <div id="address" class="tab-pane fade">
+      <h3>Adderss</h3>
+      <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
+    <p>Copyright © 2020 XLaundry</p>
+</footer>
+</body>
+</html>

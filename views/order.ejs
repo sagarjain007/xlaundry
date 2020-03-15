@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>XLaundry</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/order.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
+
+  <!--fontawesome-->  
+  <script src="https://kit.fontawesome.com/59d08ea832.js" crossorigin="anonymous"></script>
+   <!--Google fonts-->
+   <link href="https://fonts.googleapis.com/css?family=Aclonica&display=swap" rel="stylesheet">
+
+  
+</head>
+<body>
+<div class="header">
+    <ul type="none">
+        <li class="heading-display"><h1>XLaundry</h1></li>
+        <li class="heading-display"><h4><i class="fas fa-phone-volume fa-2x"></i>&nbsp;080-26631163</h4></li>
+        <li class="heading-display2"><h3 style="text-transform: capitalize;">Welcome, <%=userobj.username%></h3></li>
+        <li class="li4"><a href="/login">Logout &nbsp;|&nbsp;<i class="fas fa-sign-out-alt"></i></a></li>
+    </ul>
+    
+</div>
+<div class="container">
+<div class="align-center">
+
+  <ul class="nav nav-pills " id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="pills-home-tab" data-toggle="tab" href="#book" role="tab" aria-controls="pills-home">Schedule Pickup</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-profile-tab" data-toggle="tab" href="#price" role="tab" aria-controls="pills-profile">Price List</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-contact-tab" data-toggle="tab" href="#myorders" role="tab" aria-controls="pills-contact">My Orders&nbsp;
+        <% if(orderCount!=0){ %>
+        <span class="badge badge-light"><%=orderCount%></span>
+        <%}%>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-contact-tab" data-toggle="tab" href="#myaddress" role="tab" aria-controls="pills-contact">My Profile</a>
+    </li>
+  </ul>
+
+</div>
+  <div class="tab-content" id="pills-tabContent">
+      <!--BOOK -->
+    <div id="book" class="tab-pane fade show active align-center" role="tabpanel">
+      <form action="/book" method="post">
+      <h5><span>1</span>&nbsp; SELECT SERVICE TYPE</h5>
+    <ul class="ul-cb">
+      <li class="li-cb"><input type="radio" id="cb1" name="serviceType" value="normalDelivery" />
+        <label for="cb1"><img src="images/delivery.png" /></label><span><p>REGULAR</p></span>
+      </li>
+      <li class="li-cb"><input type="radio" id="cb2" name="serviceType" value="fastDelivery" />
+        <label for="cb2"><img src="images/fast-delivery.png" /></label><span><p>EXPRESS - ₹.50</p></span>
+        </li>
+    </ul>
+      <h5 class="h5-margin"><span>2</span>&nbsp; SELECT THE SERVICES</h5>
+      <ul class="ul-cb">
+        <li class="li-cb"><input type="checkbox" id="cb3" name="iron" value="iron" />
+          <label for="cb3"><img src="images/iron.png" /></label><span><p>Steam Iron</p></span>
+        </li>
+        <li class="li-cb"><input type="checkbox" id="cb4" name="washfold" value="washfold" />
+          <label for="cb4"><img src="images/washfold.png" /></label><span><p>Wash & Fold</p></span>
+          </li>
+        <li class="li-cb"><input type="checkbox" id="cb5" name="washpress" value="washpress" />
+          <label for="cb5"><img src="images/washpress.png" /></label><span><p>Wash & Press</p></span>
+          </li>
+        <li class="li-cb"><input type="checkbox" id="cb6" name="dryclean" value="dryclean" />
+          <label for="cb6"><img src="images/dryclean.png" /></label><span><p>Dry Clean</p></span>
+          </li>
+      </ul>
+      <h5  style="margin-bottom: 3%;"><span>3</span>&nbsp; ENTER DATE</h5>
+      <input list="dates" id="date" name="date" required autocomplete="off">
+      <datalist id="dates">
+        <option value=<%= today %>>
+        <option value=<%= tomorrow %>>
+        <option value=<%= dayaftertom %>>
+      </datalist>
+      <h5 style="margin-top: 2em; margin-bottom: 1em;"><span>4</span>&nbsp; ENTER ADDRESS</h5>
+      <button id="load" class="btn btn-primary" type="button" title="Turn on your location" data-toggle="popover" data-trigger=" hover " data-content="Turn on your location services & if your address is correct click Book now. You can also type your address irrespective of the location displayed or if it is incorrect">Detect Location</i></button>
+      <p id="demo"></p>
+      <input type="hidden" name="latitude" value="0">
+      <input type="hidden" name="longitude" value="0">
+      <div id="map"></div>
+      <div class="form-group .w-25">
+        <h6 style="    width: 60%;margin-top: 2%;margin-bottom: 1%;">Enter Address :</h6>
+        <textarea class="form-control" id="addresstextarea" cols="5" rows="3" name="address"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" name="book" value="" style="border-radius: 18px;">Book Now</button>
+    </form>
+    </div>
+    <!--price-->
+    <div id="price" class="tab-pane fade" role="tabpanel">
+        <h1>Xlaundry Price List</h1>
+        <br><br><br>
+        <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <h3>Item Name</h3>
+               <h3><span class="badge badge-pill">Price</span></h3>
+              </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Regular garments (Upto 4kgs)
+              <span class="badge badge-primary badge-pill">Rs.200</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Regular garments (Above 4kgs)
+              <span class="badge badge-primary badge-pill">Rs.60/kg</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Curtains Small
+              <span class="badge badge-primary badge-pill">Rs.40/piece</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Curtains Heavy
+                <span class="badge badge-primary badge-pill">Rs.120/piece</span>
+              </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Blankets Double
+                <span class="badge badge-primary badge-pill">Rs.120/piece</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Blankets Heavy
+                <span class="badge badge-primary badge-pill">Rs.200/piece</span>
+              </li>
+        </ul>
+    </div>
+    <!--My Orders-->
+    <div id="myorders" class="tab-pane fade" role="tabpanel">
+          <% if(orders.length==0){ %>
+            <p>No Orders Placed</p>
+          <%}else{%>
+            <% orders.forEach(function(item){ %>
+          <div class="item-orders">
+            <p style="display: inline-block;width: 83%;"><strong>ORDER ID : </strong><em><%=item._id%></em></p>
+            <%if(item.status=="Order Placed"){%>
+              <h6 class="status" style="color: black;"><%=item.status%></h6>
+              <div class="spinner-grow text-dark" role="status"></div>
+            <%}else if(item.status=="Order Confirmed"){%>
+              <h6 class="status"><%=item.status%></h6>
+              <div class="spinner-grow text-success" role="status"></div>
+            <%}else if(item.status=="Order Cancelled"){%>
+              <h6 class="status" style="color: red;"><%=item.status%></h6>
+              <div class="spinner-grow text-danger" role="status"></div>
+              <%}%>
+            <p style="margin:0;">Date :<%=item.date%></p>
+          </div>
+          <%})%>
+          <%}%>
+    </div>
+
+    <!--My Address-->
+    <div id="myaddress" class="tab-pane fade" role="tabpanel">
+      <i class="far fa-id-card fa-10x"></i>
+      <div class="profile">
+        <ul type="none">
+          <li><h6><i class="far fa-user profile-fa"></i>Name : <%=userobj.username%></h6> </li>
+          <li><h6><i class="fas fa-mobile profile-fa"></i>Phone Number : <%=userobj.phoneno%></h6></li>
+          <li><h6><i class="fas fa-envelope-square profile-fa"></i>E-mail : <%=userobj.email%></h6></li>
+        </ul>       
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
+    <p>Copyright © 2020 XLaundry</p>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="order.js" charset="utf-8"></script>
+
+
+</body>
+</html>
